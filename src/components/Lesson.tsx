@@ -10,12 +10,7 @@ interface LessonProps {
   type: 'live' | 'class';
 }
 
-export function Lesson({
-  title,
-  slug,
-  availableAt,
-  type,
-}: LessonProps) {
+export function Lesson({ title, slug, availableAt, type }: LessonProps) {
   const isLessonAvailable = useMemo(() => {
     return isPast(availableAt);
   }, [availableAt]);
@@ -28,9 +23,7 @@ export function Lesson({
 
   return (
     <a href="#">
-      <span className="text-gray-300">
-        {availableDateFormatted}
-      </span>
+      <span className="text-gray-300">{availableDateFormatted}</span>
 
       <div className="rounded border border-gray-500 p-4 mt-2">
         <header className="flex items-center justify-between">
@@ -50,9 +43,7 @@ export function Lesson({
           </span>
         </header>
 
-        <strong className="text-gray-200 mt-5 block">
-          {title}
-        </strong>
+        <strong className="text-gray-200 mt-5 block">{title}</strong>
       </div>
     </a>
   );
