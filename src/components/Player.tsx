@@ -34,11 +34,11 @@ export function Player({ lessonSlug }: PlayerProps) {
         </div>
       </div>
 
-      <div className="p-8 max-w-[1100px] mx-auto">
-        <div className="flex items-start gap-16">
+      <div className="p-4 max-w-[1100px] mx-auto lg:p-8">
+        <div className="flex items-start gap-8 flex-col lg:flex-row lg:gap-16">
           {data.lesson.teacher && (
             <div className="flex-1">
-              <h1 className="text-2xl font-bold">{data.lesson.title}</h1>
+              <h1 className="text-xl font-bold lg:text-2xl">{data.lesson.title}</h1>
               <p className="mt-4 text-gray-200 leading-relaxed">{data.lesson.description}</p>
 
               <div className="flex items-center gap-4 mt-6">
@@ -49,14 +49,14 @@ export function Player({ lessonSlug }: PlayerProps) {
                 />
 
                 <div className="leading-relaxed">
-                  <strong className="font-bold text-2xl block">{data.lesson.teacher.name}</strong>
+                  <strong className="font-bold text-xl block lg:text-2xl">{data.lesson.teacher.name}</strong>
                   <span className="text-gray-200 text-sm block">{data.lesson.teacher.bio}</span>
                 </div>
               </div>
             </div>
           )}
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 w-full lg:w-auto">
             <a
               href="#"
               className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors"
@@ -74,7 +74,7 @@ export function Player({ lessonSlug }: PlayerProps) {
             </a>
           </div>
         </div>
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 mt-20 grid grid-cols-1 xl:grid-cols-2">
           <a
             href="#"
             className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
@@ -82,7 +82,7 @@ export function Player({ lessonSlug }: PlayerProps) {
             <div className="bg-green-700 h-full p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
-            <div className="py-6 leading-relaxed">
+            <div className="py-6 leading-relaxed flex-1">
               <strong className="text-2xl">Material Complementar</strong>
               <p className="text-sm text-gray-200 mt-2">
                 Acesse o material complementar para acelerar o seu desenvolvimento
@@ -92,7 +92,6 @@ export function Player({ lessonSlug }: PlayerProps) {
               <CaretRight size={24} />
             </div>
           </a>
-
           <a
             href="#"
             className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
@@ -100,7 +99,7 @@ export function Player({ lessonSlug }: PlayerProps) {
             <div className="bg-green-700 h-full p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
-            <div className="py-6 leading-relaxed">
+            <div className="py-6 leading-relaxed flex-1">
               <strong className="text-2xl">Wallpapers</strong>
               <p className="text-sm text-gray-200 mt-2">
                 Baixe wallpapers exlusivos do Ignite Lab e personalize a sua máquina
